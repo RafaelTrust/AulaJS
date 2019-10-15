@@ -1,0 +1,103 @@
+<html>
+    <head>
+        <title>Exemplos Menu</title>
+        <meta charset="UTF-8" />
+        <script type="text/javascript" src="menu.js"></script>
+        <link rel="stylesheet" type="text/css" href="menu.css" media="screen" />
+    </head>
+    <body id="tudo">
+            <!--Menu
+            <table>
+                <tr>
+                        <td colspan="3"><h1><center><strong>Bem Vindo ao Jogo da Bolinha!</strong></center></h1></td>
+                </tr>
+                <tr>
+                    <td><input type="button" onclick="jogar()" value="Jogar"/></td>
+                    <td><input type="button" onclick="opcao()" value="Opções"/></td>
+                    <td><input type="button" onclick="regras()" value="Regras"/></td>
+                </tr>
+            </table>
+        Opções-->
+        <form method="POST" onsubmit="guardar()">
+            <div class="caixa">
+                <table>
+                    <tr>
+                            <td><h1><center><strong>Opções</strong></center></h1></td>
+                    </tr>
+                    <tr>
+                        <td>Tipo de jogo</td>
+                        <td><input type="radio" name="tipo" onchange="pontos()"/> Pontos</td>
+                        <td><input type="radio" name="tipo" onchange="tempo()"/> Tempo</td>
+                    </tr>
+                    <tr id="ponto" hidden>
+                        <td>Limite de Pontuação</td>
+                        <td>
+                            <input type='range' id='range' name='segundos' min='20' max='200' onchange='mudarPontos("pontos");'/>
+                        </td>
+                        <td>
+                            <p id='mudar'></p>
+                        </td>
+                    </tr>
+                    <tr id="tempo" hidden>
+                            <td>Limite Temporal</td>
+                            <td>
+                                <input type='range' id='range2' name='segundos' min='20' max='200' onchange='mudarTempo("segundos");'/>
+                            </td>
+                            <td>
+                                <p id='mudar2'></p>
+                            </td>
+                    </tr>
+                    <tr>
+                        <td>Mudanças</td>
+                        <td><input type="radio" name="mudanca" onchange="aparencia()"/> Aparência</td>
+                        <td><input type="radio" name="mudanca" onchange="comandos()"/> Comandos</td>
+                    </tr>
+                    <!--Aparencia Menu-->
+                    <tr id="aparencia" hidden>
+                        <td>Cor Primaria</td>
+                        <td  colspan="2"><input type="color" value="#F48024"/></td>
+                    </tr>
+                    <tr id="aparencia2" hidden>
+                        <td>Cor Secundaria</td>
+                        <td  colspan="2"><input type="color" value="#0095ff"/></td>
+                    </tr>
+                    <tr id="aparencia3" hidden>
+                        <td>Dimenção Horizontal</td>
+                        <td>
+                            <input type='range' id='horizontal' name='horizontal' min='20' max='200' onchange='mudarHorizontal("pixels");'/>
+                        </td>
+                        <td>
+                            <p id='mudarH'></p>
+                        </td>
+                    </tr>
+                    <tr id="aparencia4" hidden>
+                        <td>Dimenção Vertical</td>
+                        <td>
+                            <input type='range' id='vertical' name='vertical' min='20' max='200' onchange='mudarVertical("pixels");'/>
+                        </td>
+                        <td>
+                            <p id='mudarV'></p>
+                        </td>
+                    </tr>
+                    <!--Comandos Menu-->
+                    <tr id="comandos" hidden>
+                        <td>Sair</td>
+                        <td colspan="2"><input type="text" id="sair" required="required" contextmenu="alterar(event,'sair')" readonly/></td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+        <!--Regras
+        <table>
+            <tr>
+                <td><h1><center><strong>Regras</strong></center></h1></td>
+            </tr>
+            <tr>
+                <td><input type="button" onclick="jogar()" value="Jogar"/></td>
+                <td><input type="button" onclick="opcao()" value="Opções"/></td>
+                <td><input type="button" onclick="regras()" value="Regras"/></td>
+            </tr>
+        </table>-->
+    </body>
+</html>
+

@@ -1,0 +1,1 @@
+document.write("<a href='https://jsfiddle.net'>site para testar tudo de forntend!</a>"); 

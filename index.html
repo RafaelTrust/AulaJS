@@ -1,0 +1,154 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Aulas de JS</title>
+       
+        <style>
+            #n1 {
+                width:  200px;
+                height: 200px;
+                border: 1px solid #000;
+                float:  left;
+                margin-right: 10px;
+                font-size: 100px;
+                text-align: center;
+                line-height: 200x;
+                background-color: #EEE;
+            }
+
+            #n2 {
+                width:  200px;
+                height: 200px;
+                border: 1px solid #000;
+                float:  left;
+                margin-right: 10px;
+                font-size: 100px;
+                text-align: center;
+                line-height: 200x;
+                background-color: #EEE;
+            }
+        </style>
+    </head>
+    <body onload="carregar()" onunload="fechou()">
+        <h1><strong>Olá Mundo!</strong></h1>
+        <br> 
+        <p>Vamos testar o JS!</p>
+        <button onclick="window.location.href = window.location.href;">Teste(atualizar)</button>
+        <br>
+        <button onclick="window.location.href = 'http://www.google.com.br';">Teste(redirecionar)</button>
+        <!--Aula 6-->
+        <br><br>
+        <hr>
+        <div id="area">Alguma coisa...</div>
+        <br>
+        <button onclick="document.getElementById('area').innerHTML = prompt('Qual seu nome?')">Fazer Ação</button>
+        <br>
+        <button onclick="this.innerHTML = prompt('trocar nome do butão')" >Mudar o Butão</button>
+        <br>
+        <hr>
+        <!--Aula 7-->
+        <div id="area1">Alguma coisa...</div>
+        <br>
+        <button id="nome" onclick="acao()">Nome</button>
+        <button  onclick="acao1(document.getElementById('nome'))">Sobrenome</button>
+        <!--Aula 8-->
+        <br><br>
+        <hr>
+        <h3>Ingredientes de Bolo</h3>
+        <input type="text" id="ingrediete" />
+        <button onclick="addIngrediete()">Adicionar</button>
+        <br><br><br>
+        <ul id="lista">
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+            <li>Item 4</li>
+            <li>Item 5</li>
+        </ul>
+        <br><br><br>
+        <!--Aula 9-->
+        <hr>
+        <input type="text" name="campo1" id="campo1"/>
+        <input type="text" name="campo2" id="campo2"/>
+        <button onclick="somar();">Somar</button>
+        <br><br><br>
+        <!--Aula 11-->
+        <hr>
+        <h1><center>Acerte o número que esta na Tela!</center></h1>
+        <div id="n1">0</div>
+        <input type="text" id="n2" />
+        <div style="clear:both"></div>
+        <br><br>
+        <button onclick="verificar()">Verificar</button>
+        <br><br><br>
+        <!--Aula Intermediaria 1 Eventos Mouse-->
+        <hr>
+        <h1>Eventos</h1>
+        <br><br>
+        <!--<button onmousedown="apertamouse()" onmouseup="soltoumouse()" onmouseover="mousecima()" onmouseout="mousefora()" onmousemove="semeche()" onclick="clicou()" contextmenu="return botaodireito()" ondblclick="cliqueduplo()">Butão</button>-->
+        <br><br><br>
+        <!--Teste-->
+        <hr>
+        <h1>Imagem se move junto do mouse</h1>
+        <div id="barra" onmousemove="semovendo()" >
+        <img class="img" contextmenu="return false" src="pinguin.png"/></div>
+        </div>
+        <br><br><br>
+        <!--Aula Intermediaria 2 Eventos Teclado-->
+        <hr>
+        <input type="text" onkeydown="apertouTecla(event)" onkeyup="soltouTecla(event)" onkeypress="clicouTecla(event)"/>
+         <br><br><br>
+        <!--Aula Intermediaria 4 Eventos de Formulário-->
+        <hr>
+        <h1>Formulario</h1>
+        <form method="POST" onsubmit="return false">
+            <table>
+                <tr>
+                    <td>Nome</td>
+                    <td><input type="text" onfocus="cursorNele()" onblur="cursorSaiu()" name="nome"/></td>
+                </tr>
+                <tr>
+                    <td>Cidade</td>
+                    <td>
+                        <select name="cidade" onchange="mudouOpcao(this)">
+                            <option>selecione</option>
+                            <option value="São Paulo.S">São Paulo</option>
+                            <option value="Rio de Janeiro.S">Rio de Janeiro</option>
+                            <option value="João Pessoa.S">João Pessoa</option>
+                            <option value="Niteroí.S">Niteroí</option>
+                            <option value="Campinas.S">Campinas</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" value="Enviar"/>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <br><br><br>
+        <!--Jogo da Bolinha-->
+        <hr>
+        <a href="bolinha.html">Jogar</a>
+        <!--Scripts JS-->
+        <script type="text/javascript" src="AulaInt4.js"></script>
+        <!--<script type="text/javascript" src="AulaInt2.js"></script>
+        <script type="text/javascript">
+            function semovendo(){  
+                var pY = window.event.clientY;
+                var img = document.getElementById('barra');
+                img.setAttribute("style", "position: relative; left: 0");
+                img.style.top = (pY - img.offsetHeight / 2)  + "px";
+            }
+        </script>
+        
+        <script type="text/javascript" src="Aula11.js"></script>
+        <script type="text/javascript" src="Aula9.js"></script>
+        <script type="text/javascript" src="Aula8.js"></script>
+        <script type="text/javascript" src="Aula7.js"></script>
+        <script type="text/javascript" src="Aula4.js"></script>
+        <script type="text/javascript" src="Aula2.js"></script>
+        <script type="text/javascript" src="Aula1.js"></script>-->
+    </body>
+</html>
